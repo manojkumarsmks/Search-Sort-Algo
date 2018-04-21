@@ -10,12 +10,12 @@ public class SelectionSort {
 		for(int i =0; i <inputArray.length; i++) {
 			for( int j =i+1; j<inputArray.length; j++) {
 				if(arrayInput[i] > arrayInput[j]) {
-					System.out.println(arrayInput[i]+" > > > "+arrayInput[j]);
-					tempValue = arrayInput[j];
 					tempIndex = j;
 				}
-				// Swap the elements if the  low index elements are largers than high index elements
-				swap(i, tempIndex, inputArray);
+			}
+			// Swap the elements if the  low index elements are largers than high index elements
+			if(tempIndex > i) {
+				inputArray = swap(i, tempIndex, inputArray);
 			}
 		}
 		
@@ -40,6 +40,7 @@ public class SelectionSort {
 		for (int i = 0; i < inputOne.length; i++) {
 			System.out.println(inputOne[i]);
 		}
+
 	}
 
 }
